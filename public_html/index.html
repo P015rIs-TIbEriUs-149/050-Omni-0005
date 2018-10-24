@@ -6,6 +6,7 @@
 		<meta charset="UTF-8">
 		<title>HTML Tutorial</title>
 		<link rel="stylesheet" href="styles.css">
+		<meta name="description" content="This is a way to access the DOM Meta Object which may be usefull for debugging">
 	</head> 
 		<body>
 
@@ -21,6 +22,32 @@
 
 			<h2> Styling HTML with CSS </h2>
 			<p> Because W3C.org dings us on using inline css and internal css we will only use external css files.</p>
+			<br />
+
+			<!-- Meta Object
+			The Meta object represents an HTML <meta> element.
+
+			Access a Meta Object
+			You can access a <meta> element by using getElementsByTagName():
+			Personal note: This and others like it can be used to debug your pages. Keep this or create a
+			snippet page in the HTML library that describes what it's for and how it can be used.
+			-->
+			
+			<h3>A demonstration of how to access a META element</h3>
+
+			<p>Click the button to get the content of the meta information.</p>
+
+			<button onclick="myFunction()">Try it</button>
+
+			<p id="demo"></p>
+
+			<script>
+			function myFunction() {
+			    var x = document.getElementsByTagName("META")[0].content;
+			    document.getElementById("demo").innerHTML = x;
+			}
+			</script>
+
 
 
 		</body>
